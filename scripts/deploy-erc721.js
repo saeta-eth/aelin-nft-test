@@ -1,14 +1,14 @@
 const hre = require("hardhat");
 
 async function main() {
-  const AelinNftTest = await hre.ethers.getContractFactory("AelinNftTest");
-  const aelinNftTest = await AelinNftTest.deploy();
+  const AelinERC721Test = await hre.ethers.getContractFactory("AelinERC721Test");
+  const aelinERC721Test = await AelinERC721Test.deploy();
 
-  await aelinNftTest.deployed();
+  await aelinERC721Test.deployed();
 
-  console.log("Aelin NFT Test deployed on:", aelinNftTest.address);
+  console.log("Aelin ERC-721 Test deployed on:", aelinERC721Test.address);
 
-  await _verifyContract(aelinNftTest.address)
+  await _verifyContract(aelinERC721Test.address)
 }
 
 async function _verifyContract(contractAddress) {

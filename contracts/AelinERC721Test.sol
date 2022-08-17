@@ -12,12 +12,10 @@ contract AelinNftTest is ERC721, ERC721Enumerable, Pausable, Ownable {
 
     Counters.Counter private _tokenIdCounter;
 
-    string public baseExtension = ".json";
-
-    constructor() ERC721("AelinNftTest", "AELIN-NFT-TEST-1") {}
+    constructor() ERC721("AelinNftTest", "AELIN-NFT-TEST-5") {}
     
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/";
+        return "https://ikzttp.mypinata.cloud/ipfs/QmQFkLSQysj94s5GvTHPyzTxrawwtjgiiYS2TBLgrvw8CW/";
     }
 
     function pause() public onlyOwner {
@@ -69,8 +67,7 @@ contract AelinNftTest is ERC721, ERC721Enumerable, Pausable, Ownable {
         return string(
             abi.encodePacked(
                 _baseURI(),
-                Strings.toString(tokenId),
-                baseExtension
+                Strings.toString(tokenId)
             )
         );
     }

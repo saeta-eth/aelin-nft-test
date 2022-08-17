@@ -1,9 +1,10 @@
 {
   "name": "aelin-nft-test",
   "scripts": {
-    "start:hardhat:node": "npx hardhat node",
-    "start:hardhat:compile": "npx hardhat compile",
-    "start:hardhat:deploy": "npx hardhat run scripts/deploy.js --network optimistic-mainnet"
+    "hardhat:node": "npx hardhat node",
+    "hardhat:compile": "npx hardhat compile",
+    "hardhat:deploy:erc721": "npx hardhat run scripts/deploy-erc721.js --network optimistic-mainnet",
+    "hardhat:deploy:erc1155": "npx hardhat run scripts/deploy-erc1155.js --network optimistic-mainnet"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.1.0",
